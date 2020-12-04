@@ -11,6 +11,8 @@ Begin["`Private`"]
 
 physConsts[expr_] := Return[expr /. {
 \[HBar] -> Quantity["ReducedPlanckConstant"],
+h -> Quantity["PlanckConstant"],
+c -> Quantity["SpeedOfLight"],
 e -> Quantity["ElementaryCharge"],
 kB -> Quantity["BoltzmannConstant"],
 me -> Quantity["ElectronMass"],
