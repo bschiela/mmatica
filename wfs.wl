@@ -15,7 +15,8 @@ e -> Quantity["ElementaryCharge"],
 kB -> Quantity["BoltzmannConstant"],
 me -> Quantity["ElectronMass"],
 \[Epsilon]0 -> Quantity["ElectricConstant"],
-\[Mu]0 -> Quantity["MagneticConstant"]};
+\[Mu]0 -> Quantity["MagneticConstant"],
+\[CapitalPhi]0 -> Quantity["MagneticFluxQuantum"]};
 
 gaussToSI = {
 EE -> Sqrt[4Pi \[Epsilon]0]EE,
