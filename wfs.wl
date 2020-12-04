@@ -1,15 +1,13 @@
 (* ::Package:: *)
 
-BeginPackage["wfs`"]
+BeginPackage["wfs`"];
 Unprotect@@Names["wfs`*"];
 ClearAll@@Names["wfs`*"];
 
-physConsts::usage = "physConsts[expr] replaces constants in expr"
-gaussToSI::usage = "gaussToSI[expr] transforms Gaussian expr to SI"
+physConsts::usage = "/. physConsts inserts corresponding Quantity"
+gaussToSI::usage = "/. gaussToSI transforms Gaussian expressions to SI"
 
-Begin["`Private`"]
-
-physConsts[expr_] := Return[expr /. {
+physConsts = {
 \[HBar] -> Quantity["ReducedPlanckConstant"],
 h -> Quantity["PlanckConstant"],
 c -> Quantity["SpeedOfLight"],
@@ -17,16 +15,17 @@ e -> Quantity["ElementaryCharge"],
 kB -> Quantity["BoltzmannConstant"],
 me -> Quantity["ElectronMass"],
 \[Epsilon]0 -> Quantity["ElectricConstant"],
-\[Mu]0 -> Quantity["MagneticConstant"]}]
+\[Mu]0 -> Quantity["MagneticConstant"]};
 
-gaussToSI[expr_] := Return[expr /. {
+gaussToSI = {
 EE -> Sqrt[4Pi \[Epsilon]0]EE,
 DD -> Sqrt[(4Pi)/\[Epsilon]0]DD,
 e -> e/Sqrt[4Pi \[Epsilon]0],
 B -> Sqrt[(4Pi)/\[Mu]0]B,
-H -> Sqrt[4Pi \[Mu]0]H}]
+H -> Sqrt[4Pi \[Mu]0]H};
 
-End[]
+Begin["`Private`"];
+End[];
 Protect@@Names["wfs`*"];
 EndPackage[]
 
