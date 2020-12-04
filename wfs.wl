@@ -25,7 +25,7 @@ B -> Sqrt[(4Pi)/\[Mu]0]B,
 H -> Sqrt[4Pi \[Mu]0]H}]
 
 End[]
-Protect@@Names["foo`*"];
+Protect@@Names["wfs`*"];
 EndPackage[]
 
 
