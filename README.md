@@ -1,6 +1,7 @@
 To install, go to `File > Install`, and select:
 
 | Type of Item to Install: | Package |
+|---|---|
 | Source: | From File ... (select the `.wl` file) |
 | Install Name: | `wfs` |
 
