@@ -13,5 +13,5 @@ specified in "InstallName:".
 To uninstall, execute `$UserBaseDirectory // SystemOpen` and delete the `.wl`
 file from the `Applications` directory.
 
-To use, execute `Needs["wfs\`"]`.  Names can be used directly e.g. `physConsts`
-or by prefixing the `Context` e.g. `wfs\`physConsts`.
+To use, execute ``Needs["wfs`"]``.  Names can be used directly e.g. `physConsts`
+or by prefixing with the `Context` e.g. ``wfs`physConsts``.
